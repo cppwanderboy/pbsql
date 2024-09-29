@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package playground;
+
+
+message Position{
+  optional int64 contract_id = 1;
+  optional string account_id = 2;
+  optional int32 today_long = 3;
+  optional int32 today_short = 4;
+  optional int32 yesterday_long = 5;
+  optional int32 yesterday_short = 6;
+}
+
+message Portfolio{
+  optional string name = 1;
+  repeated Position positions = 2;
+}
